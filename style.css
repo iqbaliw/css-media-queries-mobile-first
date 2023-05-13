@@ -1,0 +1,135 @@
+/* BASE COLOR */
+:root {
+    --clr-light-purple: #c56cf0;
+    --clr-young-salmon: #ffb8b8;
+    --clr-red-orange: #ff3838;
+    --clr-radiant-yellow: #ff9f1a;
+    --clr-dorn-yellow: #fff200;
+    --clr-winter-green: #32ff7e;
+    --clr-electric-blue: #7efff5;
+    --clr-neon-blue: #18dcff;
+    --clr-light-slate-blue: #7d5fff;
+    --clr-shadow-grey: #4b4b4b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Oxygen", sans-serif;
+}
+
+nav {
+    max-width: 100%;
+    background-color: var(--clr-light-slate-blue);
+    height: 60px;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+nav .wrapper {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    /* max-width: 100%; */
+    color: white;
+    align-items: center;
+    height: 60px;
+}
+
+.header-logo {
+    width: 30%;
+}
+
+ul.menu {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul.menu li {
+    list-style-type: none;
+}
+
+ul.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header {
+    max-width: 100%;
+    background-color: var(--clr-neon-blue);
+}
+
+header .wrapper {
+    /* max-width: 100%; */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+header .wrapper h2 {
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--clr-shadow-grey);
+    font-size: 5rem;
+    text-align: center;
+}
+
+/* mobile responsive */
+/* xl */
+@media screen and (min-width: 375px) {
+    .header-logo {
+        width: 50%;
+    }
+
+    .header-logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .header-logo h1 a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .wrapper {
+        max-width: 95%;
+    }
+
+    header .wrapper h2 {
+        font-size: 3.5rem;
+    }
+
+    ul.menu {
+        display: none;
+    }
+
+    .toggleMenu {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .toggleMenu span {
+        width: 30px;
+        height: 6px;
+        background-color: white;
+    }
+
+    .toggleMenu #showMenu {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+    }
+}
