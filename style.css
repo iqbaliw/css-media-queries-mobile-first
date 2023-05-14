@@ -99,8 +99,13 @@ header .wrapper h2 {
         color: white;
     }
 
+    nav.wrapper {
+        z-index: 20;
+    }
+
     .wrapper {
         max-width: 95%;
+        position: relative;
     }
 
     header .wrapper h2 {
@@ -108,22 +113,42 @@ header .wrapper h2 {
     }
 
     ul.menu {
-        display: none;
+        position: absolute;
+        top: 60px;
+        background-color: var(--clr-light-purple);
+        flex-direction: column;
+        width: 100%;
+        z-index: 10;
+        padding: 10px;
+        box-sizing: border-box;
+        transform: scale(0%);
+        transform-origin: top;
+        transition: all ease 0.2s;
+    }
+
+    ul.menu.active {
+        transform: scale(100%);
+    }
+
+    ul.menu li {
+        padding: 10px;
     }
 
     .toggleMenu {
         width: 30px;
-        height: 30px;
+        height: 24px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         position: relative;
+        z-index: 0;
     }
 
     .toggleMenu span {
-        width: 30px;
-        height: 6px;
+        width: 29px;
+        height: 4px;
         background-color: white;
+        transition: all ease 0.2s;
     }
 
     .toggleMenu #showMenu {
@@ -131,5 +156,22 @@ header .wrapper h2 {
         width: 30px;
         height: 30px;
         opacity: 0;
+        cursor: pointer;
+        display: block;
+        z-index: 1;
+    }
+
+    #showMenu:checked ~ :nth-child(2) {
+        transform: rotate(45deg);
+        transform-origin: left;
+    }
+
+    #showMenu:checked ~ :nth-child(3) {
+        transform: scale(0);
+    }
+
+    #showMenu:checked ~ :nth-child(4) {
+        transform: rotate(-45deg);
+        transform-origin: left;
     }
 }
