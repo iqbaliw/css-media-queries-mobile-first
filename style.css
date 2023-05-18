@@ -22,14 +22,16 @@ body {
     color: var(--clr-shadow-grey);
 }
 
-nav {
-    max-width: 100%;
-    background-color: var(--clr-light-slate-blue);
-    height: 60px;
+nav,
+header,
+section,
+footer {
+    width: 100%;
 }
 
-.wrapper {
-    width: 100%;
+nav {
+    background-color: var(--clr-light-slate-blue);
+    height: 60px;
 }
 
 nav .wrapper {
@@ -55,32 +57,26 @@ nav .wrapper {
     width: 50%;
 }
 
-ul.menu {
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
+header {
+    background-color: var(--clr-neon-blue);
 }
 
-ul.menu li {
-    list-style-type: none;
-}
-
-ul.menu li a {
+ul.menu li a,
+ul.menu li a:visited {
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
-header {
-    max-width: 100%;
-    background-color: var(--clr-neon-blue);
+ul.menu li a:hover {
+    color: var(--clr-dorn-yellow);
 }
 
-#welcome .wrapper {
+#welcome {
     background-color: var(--clr-young-salmon);
 }
 
-#portfolio .wrapper {
+#portfolio {
     background-color: var(--clr-radiant-yellow);
 }
 
@@ -94,6 +90,7 @@ header .wrapper,
     justify-content: center;
     align-items: center;
     margin: auto;
+    height: 100vh;
 }
 
 .wrapper h2 {
@@ -111,14 +108,14 @@ header .wrapper,
 
 .portfolio-item {
     padding: 20px;
-    border: 3px solid var(--clr-red-orange);
+    border: 5px solid var(--clr-dorn-yellow);
     border-radius: 15px;
     margin: 0 10px;
     text-align: center;
 }
 
 .portfolio-item h3 {
-    font-size: 25px;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -128,8 +125,13 @@ header .wrapper,
     border-radius: 10px;
 }
 
-footer .wrapper {
+footer {
     background-color: var(--clr-shadow-grey);
+    display: flex;
+    justify-content: center;
+}
+
+footer .wrapper {
     color: white;
 }
 
@@ -155,13 +157,10 @@ footer .wrapper a {
 
     .wrapper {
         width: 100%;
-        position: relative;
     }
 
-    header .wrapper,
-    #welcome .wrapper,
-    #portfolio .wrapper {
-        height: 100vh;
+    #home .wrapper {
+        position: relative;
     }
 
     .wrapper h2 {
@@ -174,6 +173,7 @@ footer .wrapper a {
         font-size: 1.2rem;
         text-align: center;
         font-weight: 700;
+        line-height: 1.5em;
     }
 
     ul.menu {
@@ -267,7 +267,7 @@ footer .wrapper a {
 /* xl */
 @media screen and (min-width: 375px) {
     .header-logo h1 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     nav .wrapper {
@@ -290,17 +290,6 @@ footer .wrapper a {
         position: relative;
     }
 
-    header .wrapper,
-    #welcome .wrapper,
-    #portfolio .wrapper {
-        height: 100vh;
-    }
-
-    #portfolio .wrapper {
-        padding: 40px 0px;
-        height: 100%;
-    }
-
     .wrapper h2 {
         font-size: 3.5rem;
     }
@@ -315,5 +304,122 @@ footer .wrapper a {
 
     footer {
         width: 100%;
+    }
+}
+
+/* sm */
+@media screen and (min-width: 640px) {
+    .header-logo {
+        width: 60%;
+    }
+
+    .header-logo h1 {
+        font-size: 1.5rem;
+    }
+
+    ul.menu {
+        position: initial;
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        transform: scale(100%);
+        background-color: transparent;
+        margin-right: -20px;
+    }
+
+    ul.menu li {
+        list-style-type: none;
+        padding: 0px;
+    }
+
+    ul.menu li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .toggleMenu {
+        display: none;
+    }
+
+    .wrapper h2 {
+        font-size: 6.5rem;
+    }
+
+    .wrapper p {
+        font-size: 2.1rem;
+        line-height: 1.7em;
+    }
+
+    #portfolio .wrapper {
+        padding: 80px 0px;
+        height: 100%;
+    }
+
+    .portfolio {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .portfolio-item {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .portfolio-item h3 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        border-radius: 20px;
+    }
+
+    .portfolio-item a img {
+        border-radius: 15px;
+    }
+}
+
+/* md */
+@media screen and (min-width: 786px) {
+    .wrapper h2 {
+        font-size: 7.5rem;
+    }
+
+    .wrapper p {
+        font-size: 2.3rem;
+    }
+}
+
+/* lg */
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        width: 1024px;
+    }
+
+    .wrapper h2 {
+        font-size: 8rem;
+    }
+
+    .wrapper p {
+        font-size: 2.7rem;
+    }
+
+    .portfolio {
+        width: 100%;
+    }
+
+    .portfolio-item {
+        padding: 25px;
+        box-sizing: border-box;
+    }
+
+    .portfolio-item h3 {
+        font-size: 3.2rem;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    footer .wrapper p {
+        font-size: 1.2rem !important;
     }
 }
