@@ -139,6 +139,8 @@ footer .wrapper a {
 }
 
 /* mobile responsive */
+/* iphone 5, iphone SE 0216 */
+/* width 320px */
 
 @media screen and (min-width: 320px) {
     .header-logo h1 {
@@ -265,13 +267,22 @@ footer .wrapper a {
 /* xl */
 @media screen and (min-width: 375px) {
     .header-logo h1 {
-        font-size: 0.8rem;
+        font-size: 1.3rem;
     }
 
     nav .wrapper {
         z-index: 20;
         padding: 0 20px;
         box-sizing: border-box;
+    }
+
+    ul.menu li {
+        padding: 0px 10px;
+        padding-bottom: 5px;
+    }
+
+    ul.menu li a {
+        font-size: 13px;
     }
 
     .wrapper {
@@ -285,8 +296,13 @@ footer .wrapper a {
         height: 100vh;
     }
 
+    #portfolio .wrapper {
+        padding: 40px 0px;
+        height: 100%;
+    }
+
     .wrapper h2 {
-        font-size: 1.5rem;
+        font-size: 3.5rem;
     }
 
     .portfolio {
