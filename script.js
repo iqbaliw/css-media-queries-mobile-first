@@ -1,6 +1,10 @@
-const ulMenu = document.querySelector("ul.menu");
-const toggleMenu = document.getElementById("showMenu");
+toggleMenu();
 
-toggleMenu.addEventListener("click", function () {
-    ulMenu.classList.toggle("active");
-});
+function toggleMenu() {
+    const ulMenu = document.querySelector("ul.menu");
+    const toggleMenu = document.getElementById("showMenu");
+
+    toggleMenu.addEventListener("click", function () {
+        ulMenu.classList.toggle("active");
+    });
+}

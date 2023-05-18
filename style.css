@@ -17,6 +17,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Oxygen", sans-serif;
     color: var(--clr-shadow-grey);
@@ -42,6 +46,14 @@ nav .wrapper {
     color: white;
     align-items: center;
     height: 60px;
+}
+
+nav#home {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    margin-bottom: 60px;
 }
 
 .header-logo {
